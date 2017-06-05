@@ -1,0 +1,14 @@
+<!--namekey's  chinese value in core\i18n\common_installer_zh_CN.properties-->
+<steps>
+	
+    <stepitem id="introduction" namekey="STEP.INTRODUCTION" stepid="02"/>
+	<stepitem id="license-agreement" namekey="STEP.LICENSE" stepid="03"/>
+	<stepitem id="install-dir" namekey="STEP.INSTALLPATH" stepid="04"/>
+	<stepitem id="setup-appserver" namekey="STEP.APPSVR" stepid="05"/>
+	<stepitem id="setup-bosssofthome" namekey="STEP.BOSSHOME" stepid="06"/>
+	<stepitem id="setup-COMPONENT" namekey="STEP.CHOOSE.COMPONENT" stepid="07"/>
+	<stepitem id="config-ds" namekey="STEP.DBCONFIG" stepid="08"/>
+	<stepitem id="digest-info" namekey="STEP.DIGEST" stepid="09"/>
+	<stepitem id="installing" namekey="STEP.INSTALLING" stepid="10"/>
+	<stepitem id="finished" namekey="STEP.INSTALLCOMPLETE" stepid="11"/>
+</steps>
