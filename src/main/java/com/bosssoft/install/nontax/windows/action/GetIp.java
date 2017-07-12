@@ -15,7 +15,8 @@ public class GetIp implements IAction{
 	transient Logger logger = Logger.getLogger(getClass());
 	
 	public void execute(IContext context, Map params) throws InstallException {
-        String ipaddress=null;
+        
+		String ipaddress=null;
 		try {
 			Enumeration<NetworkInterface> netInterfaces = NetworkInterface.getNetworkInterfaces();
 	
@@ -34,11 +35,10 @@ public class GetIp implements IAction{
 		}
 		if(ipaddress==null)ipaddress="127.0.0.1";
 		context.setValue("IP", ipaddress);
-		
 	}
 
 	public void rollback(IContext context, Map params) throws InstallException {
-		// TODO Auto-generated method stub
+		
 		
 	}
 
