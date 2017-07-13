@@ -1,0 +1,45 @@
+<servers>
+  <server>
+  	<name>JDK1.8</name>
+  	<sourcePath>${INSTALL_ROOT}/resource/jdk/1.8/jdk.zip</sourcePath>
+  	<destPath>${INSTALL_DIR}/java_1.8</destPath>
+  	<home>${INSTALL_DIR}/java_1.8/jdk1.8.0.0_64</home>
+  	<!--<required>true</required>-->
+  	<paramters>
+  		<paramter key="JAVA_HOME" value="[home]"/>
+  		<paramter key="classpath" value=".;%JAVA_HOME%/lib/dt.jar;%JAVA_HOME%/lib/tools.jar"/>
+  		<paramter key="path" value="[home]/bin"/>
+  	</paramters>
+  </server>
+  	
+  <server>
+  	<name>redis</name>
+  	<sourcePath>${INSTALL_ROOT}/resource/redis/redis.zip</sourcePath>
+  	<destPath>${INSTALL_DIR}</destPath>
+  	<home>${INSTALL_DIR}/redis</home>
+  	<paramters>
+  		<paramter key="redis_path" value="[home]/redis-server.exe"/>
+  	</paramters>
+  </server>
+  	
+  <server>
+  	<name>zookeeper</name>
+  	<sourcePath>${INSTALL_ROOT}/resource/zookeeper/zookeeper-3.4.6.zip</sourcePath>
+  	<destPath>${INSTALL_DIR}</destPath>
+  	<home>${INSTALL_DIR}/zookeeper-3.4.6</home>
+  	<paramters>
+  		<paramter key="zookeeper_path" value="[home]/bin/zkServer.cmd"/>
+  	</paramters>
+  </server>
+  	
+  <server>
+  	<name>nginx</name>
+  	<sourcePath>${INSTALL_ROOT}/option_comps/nginx/nginx-1.13.0.zip</sourcePath>
+  	<destPath>${INSTALL_DIR}</destPath>
+  	<home>${INSTALL_DIR}/nginx-1.13.0</home>
+  	<paramters>
+  		<paramter key="nginx_path" value="[home]/nginx.exe"/>
+  	</paramters>
+  </server>
+  	
+</servers>

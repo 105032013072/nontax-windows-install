@@ -72,7 +72,7 @@
 		</step>
 		
 		<step id="07" desc="OptionComponents">
-			<gui setuppanel="com.bosssoft.install.nontax.windows.gui.OptionalComponentsPanel" />
+			<gui setuppanel="com.bosssoft.platform.installer.wizard.gui.OptionalComponentsPanel" />
 			<nextstep default="08" />
 		</step>
 		
@@ -81,7 +81,7 @@
 			<nextstep default="09" />
 		</step>
 		<step id="09" desc="DigestInfo">
-			<gui setuppanel="com.bosssoft.install.nontax.windows.gui.DigestPanel" />
+			<gui setuppanel="com.bosssoft.platform.installer.wizard.gui.DigestPanel" />
 			<nextstep default="10" />
 		</step>
 		<step id="10" desc="Installing" auto="true">
@@ -98,7 +98,6 @@
 		<!--创建安装目录-->
 		<echo message="make install dir"/>
 		<mkdir dir="${INSTALL_DIR}" />
-		<!--<setvalue key="INSTALL_DIR" value="${INSTALL_DIR}\nontax" />-->
 			
 		<!--获取Ip-->
 		<echo message="get ip"/>
@@ -106,7 +105,8 @@
 		</action>	
 			
 		<!--运行环境服务安装-->
-		<action name="create run environment" classname="com.bosssoft.platform.installer.wizard.action.CreateRunEvn">
+		<echo message="create run environment"/>
+		<action name="create run environment" classname="com.bosssoft.platform.installer.wizard.action.CreateRunEvn" scale="25">
 		</action>
 		
 		<!--安装jdk-->
@@ -138,10 +138,9 @@
 		<!--安装相关组件-->
 		<echo
 			message="deploy option components" />
-		<action name="deploy option components" classname="com.bosssoft.install.nontax.windows.action.DeployOptionComps"
+		<action name="deploy option components" classname="com.bosssoft.platform.installer.wizard.action.DeployOptionComps"
 			desc="Deploy option components" scale="25">
 		</action>
-		<setvalue key="nginx_path" value="${INSTALL_DIR}/nginx-1.13.0/nginx.exe" />	
 		<!--配置nginx的转发路径-->
 		<echo message="config nginx" />
 		<action name="config nginx" classname="com.bosssoft.install.nontax.windows.action.ConfigComponents"
